@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951d27c9ff010a64bad211bf7581d70b, type: 3}
+  m_Name: banditbasis
+  m_EditorClassIdentifier: 
+  footSizeX: 0.15
+  footSizeZ: 0.3
+  heelToFoot: {x: 0, y: 0.2, z: 0}
+  toeToFoot: {x: 0, y: 0.2, z: -0.5}
+  targetToToe: {x: 0, y: 0, z: 0.25}
+  weight: 0
+  pos: {x: 0.000000030465284, y: 0.009443333, z: -0.9699353}
+  arma: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  pelvis: {x: -0, y: -0, z: -0, w: 1}
+  lowSpine: {x: -0.019364089, y: -0, z: -0, w: 0.9998124}
+  highSpine: {x: -0.017034471, y: -0.000009867246, z: -0.003675095, w: 0.99984807}
+  neck: {x: 0.0005568564, y: -0.000074396376, z: -0.0036743567, w: 0.999993}
+  head: {x: 0.023490071, y: -0.00015876221, z: -0.0036716876, w: 0.99971735}
+  shoulderL: {x: 0.5564064, y: -0.5023311, z: -0.5281816, w: -0.39887255}
+  shoulderR: {x: 0.5600064, y: 0.4982865, z: 0.531179, w: -0.39490774}
+  handL: {x: -0.010911177, y: 0.008753026, z: 0.00018036462, w: 0.9999022}
+  handR: {x: -0.0062933564, y: -0.0050482224, z: -0.00008093053, w: 0.99996746}
+  footL: {x: 0.7799409, y: 0.0007198937, z: 0.00089717464, w: 0.6258522}
+  footR: {x: 0.77994096, y: -0.0007201954, z: -0.0008975471, w: 0.6258521}
+  footLegL: {x: -0.6256611, y: 0.015491247, z: -0.018907258, w: 0.77971196}
+  footLegR: {x: -0.625661, y: -0.015491619, z: 0.01890756, w: 0.779712}
+  armLength: 1.7767683
+  legLength: 1.8058026
+  armLTwistFwdHand: {x: -0.033051014, y: 0.00000006225186, z: -0.9994537}
+  armRTwistFwdHand: {x: 0.025715433, y: -0.00000019976586, z: -0.999669}
+  footToArmature: 2.712948
+  kneeToArmature: 1.7582374
+  hipToArmature: 0.90740013
+  armatureToShoulder: 1.2491741
+  armatureToHighSpine: 0.39508414

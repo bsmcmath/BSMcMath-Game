@@ -1,0 +1,80 @@
+#pragma kernel fill
+#pragma kernel shiftRelax
+#pragma kernel applyInteractions
+
+RWTexture2D<float4> interactionTex, copyTex;
+
+struct interaction
+{
+    float3 pos;
+    float size;
+};
+StructuredBuffer<interaction> interactions;
+int interactionCount;
+
+int shiftX, shiftZ;
+float shiftY;
+
+float3 extentsMin, extentsMax;
+
+[numthreads(32,32,1)]
+void fill (uint3 id : SV_DispatchThreadID)
+{
+    interactionTex[id.xy] = float4(0, 0, 0, 0);
+}
+
+[numthreads(32, 32, 1)]
+void shiftRelax (uint3 id : SV_DispatchThreadID)
+{
+    int2 index = id.xy;
+    index.x += shiftX; index.y += shiftZ;
+    if (index.x < 1 || index.x >= 2047 || index.y < 1 || index.y >= 2047)
+    {
+        copyTex[id.xy] = float4(0, 0, 0, 0);
+    }
+    else
+    {
+        float4 pix = interactionTex[index];
+		if (pix.y > 0.0001)
+		{
+			pix.y += shiftY - 0.000005;
+			pix.y = saturate(pix.y);
+		}
+		if (pix.w > 0.0001)
+		{
+			pix.w -= 0.005;
+			pix.w = saturate(pix.w);
+		}
+        copyTex[id.xy] = pix;
+    }
+}
+
+float map(float value, float low1, float high1, float low2, float high2) { return low2 + (value - low1) * (high2 - low2) / (high1 - low1); }
+
+[numthreads(32, 32, 1)]
+void applyInteractions (uint3 id : SV_DispatchThreadID)
+{
+    float2 worldPos;
+	worldPos.x = map(id.x, 0, 2047, extentsMin.x, extentsMax.x);
+	worldPos.y = map(id.y, 0, 2047, extentsMin.z, extentsMax.z);
+	interactionTex[id.xy] = copyTex[id.xy];
+	for (int i = 0; i < interactionCount; i++)
+	{
+		float2 direction;
+		direction.x = worldPos.x - interactions[i].pos.x;
+		direction.y = worldPos.y - interactions[i].pos.z;
+		float mag = sqrt(dot(direction, direction));
+		float depth;
+		if (mag < interactions[i].size) depth = map(interactions[i].pos.y - interactions[i].size, extentsMin.y, extentsMax.y, 1, 0);
+		else depth = 0;
+		if (depth > interactionTex[id.xy].y) 
+		{
+			direction = direction / mag;
+			direction.x += 1;
+			direction.y += 1;
+			direction.x *= 0.5;
+			direction.y *= 0.5;
+			interactionTex[id.xy] = float4(direction.x, depth, direction.y, 1);
+		}
+	}
+}

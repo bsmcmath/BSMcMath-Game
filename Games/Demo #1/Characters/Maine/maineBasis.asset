@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951d27c9ff010a64bad211bf7581d70b, type: 3}
+  m_Name: maineBasis
+  m_EditorClassIdentifier: 
+  footSizeX: 0.15
+  footSizeZ: 0.23
+  heelToFoot: {x: 0, y: 0.124, z: 0}
+  toeToFoot: {x: 0, y: 0.124, z: -0.36}
+  targetToToe: {x: 0, y: 0, z: 0.18}
+  weight: 0
+  pos: {x: 0.0000000031370866, y: 0.012643394, z: -0.51281905}
+  arma: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  pelvis: {x: -0, y: -0, z: -0, w: 1}
+  lowSpine: {x: -0.012165695, y: -0.000000119200436, z: 0.0000000014502639, w: 0.999926}
+  highSpine: {x: -0.013509512, y: 0.000003089197, z: -0.0036751067, w: 0.999902}
+  neck: {x: 0.025654018, y: -0.00014070002, z: -0.0036724152, w: 0.9996642}
+  head: {x: -0.010056883, y: -0.000009481097, z: -0.0036750978, w: 0.99994266}
+  shoulderL: {x: 0.5513762, y: -0.512201, z: -0.50309765, w: -0.42488506}
+  shoulderR: {x: 0.5550791, y: 0.5081743, z: 0.506258, w: -0.42112833}
+  handL: {x: -0.009551939, y: 0.008733066, z: 0.000034085395, w: 0.99991626}
+  handR: {x: -0.005509261, y: -0.0051475354, z: -0.000006760702, w: 0.99997157}
+  footL: {x: 0.7605752, y: 0.00000070055546, z: 0.0000008206781, w: 0.6492499}
+  footR: {x: 0.7605752, y: 0.00000070055546, z: 0.0000008206781, w: 0.6492499}
+  footLegL: {x: -0.6492499, y: 0.00000079650204, z: -0.0000007211929, w: 0.7605752}
+  footLegR: {x: -0.6492499, y: 0.00000079650204, z: -0.0000007211929, w: 0.7605752}
+  armLength: 1.1496896
+  legLength: 1.2719026
+  armLTwistFwdHand: {x: -0.0071364096, y: -0.000000031211506, z: -0.99997497}
+  armRTwistFwdHand: {x: 0.0024545721, y: 0.0000004087308, z: -0.9999976}
+  footToArmature: 1.7454182
+  kneeToArmature: 1.1163329
+  hipToArmature: 0.47151566
+  armatureToShoulder: 0.737422
+  armatureToHighSpine: 0.2633748

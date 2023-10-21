@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f48b7a17742e646abe97f67bbb2e58, type: 3}
+  m_Name: zombieStagger
+  m_EditorClassIdentifier: 
+  recoilDecay:
+    lerp: 0
+    flat: 400
+    type: 1
+    worldSpace: 0
+  recoilMomentumDecay:
+    lerp: 0
+    flat: 8000
+    type: 1
+    worldSpace: 0
+  pelvisHeight: 0.35
+  lowSpineHeight: 0.47
+  highSpineHeight: 0.66
+  neckHeight: 0.85
+  headHeight: 1
+  influenceDistance: 1.2
+  twistRecoil: 3

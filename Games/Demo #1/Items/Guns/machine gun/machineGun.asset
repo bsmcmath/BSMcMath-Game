@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89352be7b0b554e45bb55d50917b222f, type: 3}
+  m_Name: machineGun
+  m_EditorClassIdentifier: 
+  rounds: 9
+  rechamberTime: 0.1
+  trailCut: 0.05
+  muzzlePosition: {x: 0, y: 0.2, z: 1.1}
+  sightsCameraPosition: {x: 0, y: 0.42, z: -0.57}
+  firingMode: 1
+  gunType: 1
+  recoil: 300
+  recoilPositionZ: 0.005
+  recoilPositionY: 0.005
+  bodyRecoil: 2
+  recoilDecay:
+    lerp: 7
+    flat: 55
+    type: 1
+    worldSpace: 0
+  recoilMomentumDecay:
+    lerp: 30
+    flat: 0
+    type: 1
+    worldSpace: 0
+  hitMomentum: 1200
+  damage: 10
